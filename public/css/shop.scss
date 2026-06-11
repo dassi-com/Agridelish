@@ -14,6 +14,7 @@ h6 {
 
 
 body {
+    padding-top: 80px;
     #btn {
         span {
             height: 50px;
@@ -26,7 +27,7 @@ body {
             position: fixed;
             right: 20px;
             bottom: 20px;
-            z-index: 2;
+            z-index: 1001;
         }
     }
 
@@ -37,9 +38,11 @@ body {
 }
 
 header {
-    position: sticky;
-    top: 0px;
-    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
     background-color: black;
     color: white;
 
@@ -70,27 +73,88 @@ header {
             .top-left {
                 display: flex;
                 flex-direction: row;
+                align-items: center;
+                gap: 5px;
+                font-size: 13px;
             }
 
             .top-right {
                 display: flex;
                 flex-direction: row;
-               
-               
-                h6:hover {
+                align-items: center;
+                gap: 5px;
+                font-size: 13px;
+                
+                p:hover {
                     color: #f10b0b;
                     cursor: pointer;
                     transition: all .5s;
                 }
             }
+            
+            .separator {
+                color: #555;
+                margin: 0 5px;
         }
     }
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #111;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 0 5px;
+    z-index: 1000;
+    border-top: 1px solid #333;
+
+    @media (min-width: 991px) {
+        display: none !important;
+    }
+
+    .bottom-nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #888;
+        text-decoration: none;
+        font-size: 10px;
+        gap: 2px;
+        transition: color 0.3s;
+
+        svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        &.active,
+        &:hover {
+            color: #f10b0b;
+        }
+    }
+}
+
+@media (max-width: 990px) {
+    body {
+        padding-bottom: 60px;
+    }
+    header nav .btn {
+        display: none;
+    }
+    .bottom-nav {
+        display: flex;
+    }
+}
 
 
     nav {
         a {
-            font-size: 18px;
-            padding: 10px;
+            font-size: 15px;
+            padding: 5px 10px;
             color: white;
         }
         .link-nav{
@@ -119,17 +183,17 @@ header {
         }
 
         .btn {
-            height: 50px;
-            width: 200px;
+            height: 38px;
+            width: 160px;
             display: flex;
             align-items: center;
             justify-content: center;
             border: 1px solid #f10b0b;
-            margin-left: 50px;
+            margin-left: 20px;
             overflow: hidden;
             z-index: 0;
             position: relative;
-            font-size: 18px;
+            font-size: 14px;
             border-radius: 0;
         }
 

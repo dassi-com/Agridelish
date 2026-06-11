@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Teko:wght@300..700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/css/about.css">
+    <link rel="stylesheet" href="/css/animations.css">
     <title>About</title>
 </head>
 
@@ -94,14 +95,14 @@
     </div>
 
     <!--================OUR-HISTRY=====================-->
-    <div class="our-histry py-5">
+    <div class="our-histry py-5" data-aos="fade-up">
         <div class="container">
             <div class="title text-center py-5">
                 <h1>OUR HISTRY</h1>
                 <img src="images/dot-shape.svg" alt="">
             </div>
             <div class="content">
-                <div class="about py-5 my-5">
+                <div class="about py-5 my-5" data-aos="fade-right">
                     <h1>OUR HISTORY</h1>
                     <p>Agro and Delish were two startups founded by entrepreneurs passionate about sustainability and
                         technology. Agro focused on solving food distribution inefficiencies in rural areas, using data
@@ -122,10 +123,10 @@
     </div>
 
     <!---======================ABOUT-SECTION============================-->
-    <div class="about-section mb-5 pb-5">
+    <div class="about-section mb-5 pb-5" data-aos="fade-up">
         <div class="container">
             <div class="about-content mt-5 pt-5">
-                <div class="delicious py-3">
+                <div class="delicious py-3" data-aos="fade-left">
                     <button class="btn my-3">ABOUT</button>
                     <h1>DELICIOUS FOOD FOR HEALTHY LIFE</h1>
                     <div class="about1 mt-5">
@@ -152,50 +153,50 @@
 
 
     <!--==================GALLERY-SECTION====================-->
-    <div class="gallery-section py-5 mt-5">
+    <div class="gallery-section py-5 mt-5" data-aos="fade-up">
         <div class="container">
             <div class="title text-center py-5">
                 <button class="btn fw-bold my-3">FOOD MENU</button>
                 <h1 class="py-3"> FOOD GALLERY POTS</h1>
                 <img src="images/dot-shape.svg" alt="">
             </div>
-            <div class="galery">
-                <div class="project">
+            <div class="galery aos-stagger">
+                <div class="project" data-aos="zoom-in">
                     <img src="images/juice4.jpg" alt="">
                     <div class="overlay">
                         <h5 class="fs-5">strawberry smoothie</h5>
                     </div>
                 </div>
 
-                <div class="project">
+                <div class="project" data-aos="zoom-in">
                     <img src="images/juice6.jpg" alt="">
                     <div class="overlay">
                         <h5 class="fs-5">GRAPE SMOOTHIE</h5>
                     </div>
                 </div>
 
-                <div class="project">
+                <div class="project" data-aos="zoom-in">
                     <img src="images/cake2.jpg" alt="">
                     <div class="overlay">
                         <h5 class="fs-5">Fruit Cake</h5>
                     </div>
                 </div>
 
-                <div class="project">
+                <div class="project" data-aos="zoom-in">
                     <img src="images/cake3.jpg" alt="">
                     <div class="overlay">
                         <h5 class="fs-5">Fruit Cake</h5>
                     </div>
                 </div>
 
-                <div class="project">
+                <div class="project" data-aos="zoom-in">
                     <img src="images/food3.jpg" alt="">
                     <div class="overlay">
                         <h5 class="fs-5">Grilled Meet</h5>
                     </div>
                 </div>
 
-                <div class="project">
+                <div class="project" data-aos="zoom-in">
                     <img src="images/food4.jpg" alt="">
                     <div class="overlay">
                         <h5 class="fs-5">Classic Ceaser Salad</h5>
@@ -206,15 +207,15 @@
     </div>
 
     <!--===================Category-section====================-->
-    <div class="category-section py-5 mt-5">
+    <div class="category-section py-5 mt-5" data-aos="fade-up">
         <div class="container">
             <div class="title text-center py-5">
                 <button class="btn fw-bold my-3">DISCOVER FOOD</button>
                 <h1 class="py-3">DISCOVER OUR CATEGORY</h1>
                 <img src="images/dot-shape.svg" alt="">
             </div>
-            <div class="category-content mt-3">
-                <div class="content">
+            <div class="category-content mt-3 aos-stagger">
+                <div class="content" data-aos="fade-up">
                     <img src="images/discover-food__item-1.jpg" alt="" width="100%">
                     <div class="description py-4 text-center">
                         <h4 class="fw-bold"> QUALITY CHEES</h4>
@@ -223,7 +224,7 @@
                     </div>
                 </div>
 
-                <div class="content">
+                <div class="content" data-aos="fade-up">
                     <img src="images/discover-food__item-2.jpg" alt="" width="100%">
                     <div class="description py-4 text-center">
                         <h4 class="fw-bold">CRUNCHI FRENCH FRY</h4>
@@ -232,7 +233,7 @@
                     </div>
                 </div>
 
-                <div class="content">
+                <div class="content" data-aos="fade-up">
                     <img src="images/discover-food__item-3.jpg" alt="" width="100%">
                     <div class="description py-4 text-center">
                         <h4 class="fw-bold">100% HALAL MEAT</h4>
@@ -247,7 +248,7 @@
 
 
     <!--=========OUR-FOURNISOR==========-->
-    <div class="fournisor-btn my-2">
+    <div class="fournisor-btn my-2" data-aos="zoom-in">
         <div class="container">
             <div class="content">
                 <button class="btn"><a href="fournisor.html"> OUR FARM
@@ -419,6 +420,7 @@
     </div>
 
 
+    <script src="javascript/animations.js"></script>
     <script src="javascript/about.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">

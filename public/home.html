@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Teko:wght@300..700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/animations.css">
     <title>Home</title>
 </head>
 
@@ -173,7 +174,7 @@
 
 
     <!--======================ABOUTE-SECTION========================-->
-    <div class="about-section py-5 mt-5">
+    <div class="about-section py-5 mt-5" data-aos="fade-up">
         <div class="container">
             <div class="about-content mt-5">
                 <div class="img-section">
@@ -206,15 +207,15 @@
     </div>
 
     <!------------------OUR-SERVICES-SECTION----------------->
-    <div class="our-service-section py-5 mt-5">
+    <div class="our-service-section py-5 mt-5" data-aos="fade-up">
         <div class="container">
-            <div class="service-title text-center py-5">
+            <div class="service-title text-center py-5" data-aos="fade-down" data-aos-delay="100">
                 <button class="btn2 fw-bold">Our Services</button>
                 <h1 class="fs-1 mt-3 fw-bold">OUR RESTAURANT SERVICES</h1>
                 <img src="images/dot-shape.svg" alt="" class="mt-1">
             </div>
-            <div class="our-service py-5">
-                <div class="wedding-service content">
+            <div class="our-service py-5 aos-stagger">
+                <div class="wedding-service content" data-aos="fade-up">
                     <img src="images/our-service__item-1.jpg" alt=""><br><br>
                     <div class="description">
                         <h5 class="fs-4 fw-bold py-1">WEDDING SERVICE</h5>
@@ -233,7 +234,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="buffet-service content">
+                <div class="buffet-service content" data-aos="fade-up" data-aos-delay="200">
                     <img src="images/our-service__item-2.jpg" alt=""><br><br>
                     <div class="description">
                         <h5 class="fs-4 fw-bold py-1">BUFFET SERVICE</h5>
@@ -252,7 +253,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="party-service content">
+                <div class="party-service content" data-aos="fade-up" data-aos-delay="400">
                     <img src="images/our-service__item-3.jpg" alt=""><br><br>
                     <div class="description">
                         <h5 class="fs-4 fw-bold py-1">PARTY SERVICE</h5>
@@ -277,7 +278,7 @@
 
 
     <!--===================MENU-SECTION========================-->
-    <div class="menu-section py-5 mt-5">
+    <div class="menu-section py-5 mt-5" data-aos="fade-up">
         <div class="container">
             <div class="content">
                 <div class="first-menu">
@@ -736,7 +737,7 @@
 
 
     <!--==================counter-and-galery-section=======================-->
-    <div class="counter-and-galery-section py-5 mt-5">
+    <div class="counter-and-galery-section py-5 mt-5" data-aos="fade-up">
         <div class="container">
             <div class="counter-section mt-5">
                 <div class="count">
@@ -813,7 +814,7 @@
     </div>
 
     <!--==================Client-Testimonial-section====================-->
-    <div class="Client-Testimonial-section mt-5 py-5">
+    <div class="Client-Testimonial-section mt-5 py-5" data-aos="fade-up">
         <div class="container">
             <div class="testimonial-title text-center py-5">
                 <button class="btn2 fw-bold my-3">CLIENT TESTIMONIAL</button>
@@ -859,7 +860,7 @@
 
 
     <!--==============RESERVATION-SECTION=================-->
-    <div class="reservation-section py-5 mt-5">
+    <div class="reservation-section py-5 mt-5" data-aos="fade-up">
         <div class="container">
             <div class="content">
                 <div class="formulaire">
@@ -888,7 +889,7 @@
     </div>
 
     <!--===============TEAM-SECTION=================-->
-    <div class="team-section mt-5">
+    <div class="team-section mt-5" data-aos="fade-up">
         <div class="container">
             <div class="team-title text-center mt-5">
                 <button class="btn2 fw-bold my-3">TEAM MEMBERS</button>
@@ -925,7 +926,7 @@
     </div>
 
     <!--===============LOOKING-SECTION=============-->
-    <div class="looking-section mb-5">
+    <div class="looking-section mb-5" data-aos="zoom-in">
         <div class="container">
             <div class="content">
                 <div class="title">
@@ -949,7 +950,7 @@
 
 
     <!--==============blog-section=================-->
-    <div class="blog-section py-5 mt-5">
+    <div class="blog-section py-5 mt-5" data-aos="fade-up">
         <div class="container">
             <div class="title-blog">
                 <div>
@@ -1261,6 +1262,7 @@
 
 
 
+    <script src="javascript/animations.js"></script>
     <script src="javascript/home.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">

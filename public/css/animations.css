@@ -1,0 +1,274 @@
+/* ===== SCROLL ANIMATIONS (aos - animate on scroll) ===== */
+.aos-init {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.aos-animate {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Fade */
+.aos-fade {
+  opacity: 0;
+  transition-duration: 0.8s;
+}
+
+/* Fade Up */
+.aos-fade-up {
+  transform: translateY(40px);
+  transition-duration: 0.8s;
+}
+
+/* Fade Down */
+.aos-fade-down {
+  transform: translateY(-40px);
+  transition-duration: 0.8s;
+}
+
+/* Fade Left */
+.aos-fade-left {
+  transform: translateX(-40px);
+  transition-duration: 0.8s;
+}
+
+/* Fade Right */
+.aos-fade-right {
+  transform: translateX(40px);
+  transition-duration: 0.8s;
+}
+
+/* Zoom In */
+.aos-zoom-in {
+  transform: scale(0.85);
+  transition-duration: 0.8s;
+}
+
+/* Zoom Out */
+.aos-zoom-out {
+  transform: scale(1.15);
+  transition-duration: 0.8s;
+}
+
+/* Flip Up */
+.aos-flip-up {
+  transform: perspective(600px) rotateX(90deg);
+  transform-origin: bottom;
+  transition-duration: 0.8s;
+}
+
+/* Flip Down */
+.aos-flip-down {
+  transform: perspective(600px) rotateX(-90deg);
+  transform-origin: top;
+  transition-duration: 0.8s;
+}
+
+/* Stagger children */
+.aos-stagger > .aos-init {
+  transition-duration: 0.6s;
+}
+
+/* ===== DELAY CLASSES ===== */
+.aos-delay-100 { transition-delay: 0.1s; }
+.aos-delay-200 { transition-delay: 0.2s; }
+.aos-delay-300 { transition-delay: 0.3s; }
+.aos-delay-400 { transition-delay: 0.4s; }
+.aos-delay-500 { transition-delay: 0.5s; }
+.aos-delay-600 { transition-delay: 0.6s; }
+.aos-delay-700 { transition-delay: 0.7s; }
+.aos-delay-800 { transition-delay: 0.8s; }
+
+/* ===== DURATION CLASSES ===== */
+.aos-duration-500 { transition-duration: 0.5s; }
+.aos-duration-1000 { transition-duration: 1s; }
+.aos-duration-1500 { transition-duration: 1.5s; }
+
+/* ===== HOVER ANIMATIONS ===== */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.hover-shine {
+  position: relative;
+  overflow: hidden;
+}
+.hover-shine::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transform: skewX(-25deg);
+  transition: none;
+}
+.hover-shine:hover::after {
+  animation: shine 0.75s ease forwards;
+}
+
+@keyframes shine {
+  100% { left: 125%; }
+}
+
+/* Pulse */
+.hover-pulse {
+  transition: transform 0.3s ease;
+}
+.hover-pulse:hover {
+  animation: pulse 0.6s ease infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* ===== SKELETON LOADING ===== */
+body:not(.loaded) .skeleton-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+body:not(.loaded) .skeleton {
+  background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite ease-in-out;
+  border-radius: 4px;
+  color: transparent !important;
+  user-select: none;
+  pointer-events: none;
+}
+
+body:not(.loaded) .skeleton * {
+  visibility: hidden;
+}
+
+body:not(.loaded) .skeleton-img {
+  background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite ease-in-out;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+body:not(.loaded) .skeleton-img img,
+body:not(.loaded) .skeleton-img svg {
+  opacity: 0;
+}
+
+body:not(.loaded) .skeleton-text {
+  height: 1em;
+  margin-bottom: 0.5em;
+  background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite ease-in-out;
+  border-radius: 4px;
+  color: transparent !important;
+}
+
+body:not(.loaded) .skeleton-text::before,
+body:not(.loaded) .skeleton-text::after,
+body:not(.loaded) .skeleton-text * {
+  visibility: hidden;
+}
+
+body:not(.loaded) .skeleton-circle {
+  border-radius: 50%;
+  background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite ease-in-out;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Content fade in after loading */
+body:not(.loaded) .skeleton-cover {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+body.loaded .skeleton-cover {
+  opacity: 1;
+}
+
+body.loaded .skeleton,
+body.loaded .skeleton-text,
+body.loaded .skeleton-img,
+body.loaded .skeleton-circle {
+  animation: none;
+  background: none;
+  color: inherit !important;
+}
+
+body.loaded .skeleton-text {
+  height: auto;
+  margin-bottom: 0;
+}
+
+body.loaded .skeleton-img img,
+body.loaded .skeleton-img svg {
+  opacity: 1;
+}
+
+body.loaded .skeleton * {
+  visibility: visible;
+}
+
+/* ===== REVEAL ANIMATIONS ===== */
+.reveal {
+  position: relative;
+  overflow: hidden;
+}
+
+.reveal::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #df4204;
+  transform: translateX(0);
+  transition: transform 0.8s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.reveal.revealed::after {
+  transform: translateX(101%);
+}
+
+/* ===== FLOATING ANIMATION ===== */
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ===== COUNT UP ANIMATION (enhancement) ===== */
+.counter {
+  display: inline-block;
+}
+
+/* ===== IMAGE REVEAL ===== */
+.img-reveal {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 1s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.img-reveal.revealed {
+  clip-path: inset(0 0 0 0);
+}

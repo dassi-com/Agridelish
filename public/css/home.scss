@@ -44,6 +44,23 @@ header {
     z-index: 999;
     background-color: black;
     color: white;
+    transition: all 0.3s ease;
+
+    &.header-scrolled {
+        .header-top {
+            transform: translateY(-100%);
+            opacity: 0;
+            visibility: hidden;
+            max-height: 0;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        nav {
+            padding: 2px 0;
+        }
+    }
 
     p:hover {
         cursor: pointer;
@@ -1528,7 +1545,7 @@ header {
 
                 a {
                     color: white;
-                    font-size: 20px;
+                    font-size: 14px;
                 }
 
                 a:hover {

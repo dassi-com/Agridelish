@@ -430,6 +430,20 @@
             <span>Contact</span>
         </a>
     </nav>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var header = document.querySelector('header');
+            if (header) {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 0) {
+                        header.classList.add('header-scrolled');
+                    } else {
+                        header.classList.remove('header-scrolled');
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
